@@ -1,4 +1,4 @@
-@client.command()
+@bot.command()
 async def unmute(ctx, member : discord.Member)
 	guild = ctx.guild
 	
