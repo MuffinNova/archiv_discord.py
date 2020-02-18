@@ -5,7 +5,7 @@ async def mute(ctx, member : discord.Member):
     for role in guild.roles:
         if role.name == 'Muted':
             await member.add_roles(role)
-            await ctx.send('{} has {} has been muted'.format(member.mention, ctx.author.mention))
+            await ctx.send('{} has been muted'.format(member.mention))
             return
             
             overwrite = discord.PermissionsOverwrite(send_messages=False)
@@ -15,4 +15,4 @@ async def mute(ctx, member : discord.Member):
                 await guild.set_permissions(newRole,overwrite=overwrite)
                 
             await member.add_roles(newRole)
-            await ctx.send('{} has {} has been muted'.format(member.mention, ctx.author.mention))
+            await ctx.send('{} has been muted'.format(member.mention))
